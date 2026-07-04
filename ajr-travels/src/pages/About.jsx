@@ -69,7 +69,7 @@ function About() {
               <div className="text-center mt-6">
 
                 <h3 className="text-3xl font-bold text-[#003B95]">
-                  Arulseeran Jezeeran
+                  Arulseelan Jezeeran
                 </h3>
 
                 <p className="text-gray-500 text-lg">
@@ -96,7 +96,7 @@ function About() {
                 AJR Travels Pvt Ltd was founded on
                 <strong> 03 February 2026 </strong>
                 by
-                <strong> Aurulseeran Jezeeran</strong>
+                <strong> Arulseelan Jezeeran</strong>
                 -with one simple vision—to make travel easy,
                 affordable, and stress-free for everyone.
               </p>
