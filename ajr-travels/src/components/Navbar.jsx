@@ -1,7 +1,9 @@
+import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { Menu, Phone } from "lucide-react";
 import logo from "../assets/logo.png";
 function Navbar() {
+  const [mobileMenu, setMobileMenu] = useState(false);
   const linkClass = ({ isActive }) =>
     isActive
       ? "text-[#003B95] font-semibold border-b-2 border-[#003B95] pb-1"
@@ -50,10 +52,33 @@ function Navbar() {
             Contact Us
           </Link>
 
-          <button className="lg:hidden">
-            <Menu size={28} />
-          </button>
+          <button
+  className="lg:hidden"
+  onClick={() => setMobileMenu(!mobileMenu)}
+>
+  <Menu size={28} />
+</button>
+{mobileMenu && (
+  <div className="lg:hidden bg-white border-t shadow-md py-4">
+    <nav className="flex flex-col items-center gap-4">
 
+      <NavLink to="/" onClick={() => setMobileMenu(false)}>Home</NavLink>
+
+      <NavLink to="/about" onClick={() => setMobileMenu(false)}>About</NavLink>
+
+      <NavLink to="/visa-services" onClick={() => setMobileMenu(false)}>Visa Services</NavLink>
+
+      <NavLink to="/air-ticketing" onClick={() => setMobileMenu(false)}>Air Ticketing</NavLink>
+
+      <NavLink to="/tour-packages" onClick={() => setMobileMenu(false)}>Tour Packages</NavLink>
+
+      <NavLink to="/gallery" onClick={() => setMobileMenu(false)}>Gallery</NavLink>
+
+      <NavLink to="/contact" onClick={() => setMobileMenu(false)}>Contact</NavLink>
+
+    </nav>
+  </div>
+)}
         </div>
       </div>
     </header>
