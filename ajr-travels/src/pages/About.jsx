@@ -470,7 +470,6 @@ function About() {
 </section>
 
 <Footer />
-
 </>
   );
 }
