@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+body{
+  margin:0;
+  background:#ffffff;
+  font-family:'Libre Baskerville', serif;
+}
+
+h1,h2,h3{
+  font-family:'Cardo', serif;
+}
+@keyframes slowZoom {
+
+  0%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.08);
+  }
+
+  100%{
+    transform:scale(1);
+  }
+
+}
+
+.animate-slowZoom{
+
+  animation:slowZoom 12s ease-in-out infinite;
+
+}
